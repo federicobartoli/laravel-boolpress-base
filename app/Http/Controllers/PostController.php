@@ -19,7 +19,7 @@ class PostController extends Controller
      // }
      public function index() {
      // $posts = Post::all(); // 'prendo' tutte le colonne dentro la tabella posts.
-     $posts = Post::where('published', '=', 1)->get();
+     $posts = Post::where('published', 1)->get();
      // dd($posts);
      return view('index' , compact('posts'));
      }
