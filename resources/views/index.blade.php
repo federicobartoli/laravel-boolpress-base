@@ -8,14 +8,14 @@
     </head>
     <body>
         @foreach ($posts as $post)
-               @if ($post->published)
+
                     <img src="{{$post->src}}" alt="{{$post->title}}">
                     <h1>{{$post->title}}</h1>
                     <p>{{$post->body}}</p>
                     <small>{{$post->author}}</small>
                     <small>{{$post->created_at}}</small>
                     <br>
-               @endif
+
         @endforeach
     </body>
 </html>
