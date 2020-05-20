@@ -12,13 +12,18 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-         $posts = Post::where('published', 1)->get();
-         // dd($posts);
-         return view('posts.index' , compact('posts'));
+     // public function index() {
+     $posts = Post::all(); // 'prendo' tutte le colonne dentro la tabella posts.
+     // dd($posts);
+     return view('index' , compact('posts'));
+     }
+     public function index() {
+     // $posts = Post::all(); // 'prendo' tutte le colonne dentro la tabella posts.
+     $posts = Post::where('published', 1)->get();
+     // dd($posts);
+     return view('index' , compact('posts'));
+     }
 
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        //
     }
 
     /**

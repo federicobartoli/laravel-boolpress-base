@@ -17,9 +17,9 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title', 150);
             $table->text('body');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('author', 100);
-            $table->text('src');
+            $table->string('src')->default('https://via.placeholder.com/200/000000/FFFFFF/?text=Federico%20bartoli');
             $table->timestamps();
         });
     }
