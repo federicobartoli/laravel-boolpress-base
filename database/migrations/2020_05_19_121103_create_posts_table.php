@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->string('slug')->unique();
             $table->string('author', 100);
-            $table->string('src')->default('https://via.placeholder.com/200/000000/FFFFFF/?text=Federico%20bartoli');
+            $table->string('img')->default('https://federicobartoli.it/img/federicobartoli.jpg');
             $table->timestamps();
         });
     }

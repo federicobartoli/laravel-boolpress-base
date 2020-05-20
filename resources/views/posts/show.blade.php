@@ -3,7 +3,7 @@
      Posts
 @endsection
 @section('mainContent')
-     @foreach ($posts as $post)
+
           <div class="card" style="width: 18rem;">
                <img class="card-img-top" src="{{$post->img}}" alt="{{$post->title}}">
                <div class="card-body">
@@ -13,5 +13,4 @@
                     <small>{{$post->created_at}}</small></p>
                </div>
           </div>
-     @endforeach
 @endsection

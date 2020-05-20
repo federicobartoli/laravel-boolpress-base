@@ -12,7 +12,7 @@ class Post extends Model
        'body',
        'slug',
        'author',
-       'published',
-       'src'
+       'published'//,
+       // 'img'
    ];
 }

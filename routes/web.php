@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 // Homepage
 Route::get('/', function () {
-    return view('index');
+    return view('index' );
 })->name('homepage');
+
+Route::get('/', 'PostController@index2')->name('homepage');
+
 // Posts
 Route::resource('posts', 'PostController');
