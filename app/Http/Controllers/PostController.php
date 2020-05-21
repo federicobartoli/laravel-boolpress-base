@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 //HELPERS LARAVEL
 use App\Post;
+use Carbon\Carbon;
 
 class PostController extends Controller
 {
@@ -48,7 +49,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();  //prendo tutti i campi
-        $data['slug'] = Str::slug($data['title'], '-') . '-' .rand(1, 2147483647). '-' .rand(1, 2147483647). '-' .rand(1, 2147483647). '-' .rand(1, 2147483647);
+        $data['slug'] = Str::slug($data['title'], '-') . '-' . Carbon::now();
         if (isset($data['published'])) {
             $data['published'] = 1;
         }
@@ -122,7 +123,7 @@ class PostController extends Controller
             abort('404');
         }
         $data = $request->all();  //prendo tutti i campi
-        $data['slug'] = Str::slug($data['title'], '-') . '-' .rand(1, 2147483647). '-' .rand(1, 2147483647). '-' .rand(1, 2147483647). '-' .rand(1, 2147483647);
+        $data['slug'] = Str::slug($data['title'], '-') . '-' . Carbon::now();
         if (isset($data['published'])) {
             $data['published'] = 1;
         }
