@@ -3,6 +3,7 @@
      Homepage
 @endsection
 @section('mainContent')
+  LOGIN : <a href=" {{route('posts.index')}}">CLICK</a>
      @foreach ($posts as $post)
           <div class="card" style="width: 18rem;">
                <img class="card-img-top" src="{{$post->img}}" alt="{{$post->title}}">
