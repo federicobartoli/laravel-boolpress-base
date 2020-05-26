@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
@@ -23,6 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-       return view('home');
+           $users = Auth::user()->get(); //prendo l'utente ricordarsi IL GET
+           // dd($users);
+           return view('home' ,compact('users') );
+
     }
+
+    // public function getUser()
+    // {
+    //    $user = User::all;
+    //    dd($user);
+    //    return view('home' ,compact('$user') );
+    // }
 }

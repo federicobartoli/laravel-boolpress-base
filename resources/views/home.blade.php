@@ -12,10 +12,16 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif
 
-                    You are logged in!
+                    @endif
+                     <h1>Utenti</h1>
+                    @foreach ($users as $user)
+                        <small>{{$user->name}}</small>
+                        <small>{{$user->email}}</small><br>
+                    @endforeach
+
                 </div>
+
             </div>
         </div>
     </div>
