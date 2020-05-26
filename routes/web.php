@@ -19,9 +19,11 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::get('/', 'PostController@index2')->name('homepage');
+Route::get('/UserController', 'Admin\UserController@index')->name('UserController');
 
 // Posts
 Route::resource('posts', 'PostController')->middleware('auth');
+Route::resource('categories', 'Admin\CategoryController');
 
 Auth::routes();
 
