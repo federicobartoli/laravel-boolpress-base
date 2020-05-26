@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/', 'PostController@index2')->name('homepage');
 
 // Posts
-Route::resource('posts', 'PostController');
+Route::resource('posts', 'PostController')->middleware('auth');
 
 Auth::routes();
 
