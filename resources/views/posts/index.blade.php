@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('titolo')
-     Posts
+     Blog
 @endsection
 @section('mainContent')
   <div class="container">
