@@ -9,8 +9,7 @@
      </head>
      <body>
           @include('partials.header')
-          @include('partials.main')
-               @yield('mainContent')
+          @yield('mainContent')
           @include('partials.footer')
      </body>
      @yield('script')
